@@ -15,6 +15,9 @@ export default function List({ items, search }) {
                     <div className="mr-1 mb-1 px-4 py-3 text-sm flex-1 leading-4 text-gray-600 font-semibold border rounded">
                         Domain
                     </div>
+                    <div className="mr-1 mb-1 px-4 py-3 text-sm flex-1 leading-4 text-gray-600 font-semibold border rounded">
+                        Updated
+                    </div>
                 </div>
                 {items.map((item, key) => (
                     <Row item={item} key={key} />

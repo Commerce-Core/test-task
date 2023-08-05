@@ -16,6 +16,7 @@ class PageRankService
         ],
             [
                 'rank' => $pageRank['rank'],
+                'updated_at' => now(),
             ]);
     }
 }
