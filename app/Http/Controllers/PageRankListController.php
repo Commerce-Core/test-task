@@ -17,7 +17,7 @@ class PageRankListController extends Controller
             'pageRanks' => PageRank::query()->when(
                 $search,
                 fn ($query) => $query->where('domain', 'like', "%{$search}%")
-            )->orderBy('rank')->paginate(100)->withQueryString(),
+            )->orderBy('rank')->paginate(100, ['domain', 'rank', 'updated_at'])->withQueryString(),
             'search' => $search ?? '',
         ]);
     }

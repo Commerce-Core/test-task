@@ -19,8 +19,8 @@ export default function List({ items, search }) {
                         Updated
                     </div>
                 </div>
-                {items.map((item, key) => (
-                    <Row item={item} key={key} />
+                {items.map((item) => (
+                    <Row item={item} />
                 ))}
             </div>
         </div>
