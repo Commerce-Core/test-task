@@ -10,7 +10,7 @@
     @inertiaHead
 </head>
 
-<body>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500">
     @inertia
 </body>
 

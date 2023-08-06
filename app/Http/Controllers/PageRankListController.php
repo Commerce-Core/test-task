@@ -19,6 +19,11 @@ class PageRankListController extends Controller
                 fn ($query) => $query->where('domain', 'like', "%{$search}%")
             )->orderBy('rank')->paginate(100, ['domain', 'rank', 'updated_at'])->withQueryString(),
             'search' => $search ?? '',
+            'header' => [
+                'rank' => __('Rank'),
+                'domain' => __('Domain'),
+                'updated_at' => __('Updated'),
+            ],
         ]);
     }
 }
