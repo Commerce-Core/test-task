@@ -43,7 +43,7 @@ class OpenPageRankFetchJob implements ShouldQueue
             $client = new Client();
             $response = $client->request('GET', config('page-rank.url'), [
                 'query' => [
-                    'domains' => $domains->toArray(),
+                    'domains' => $domains->map(fn ($value) => trim($value))->toArray(),
                 ],
                 'headers' => [
                     'Accept' => 'application/json',
